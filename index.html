@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sentiment Analyzer</title>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-6 offset-3">
+            <h1 id="title">Please write a review</h1>
+
+            <form>
+
+                <div class="form-group mt-5">
+                    <input type="text" name="review" class="form-control" placeholder="enter your review here">
+                </div>
+                <button class="btn btn-primary btn-block" type="submit">submit</button>
+            </form>
+            <div class="response-section"></div>
+        </div>
+
+    </div>
+
+    <script>
+
+        const form = document.querySelector('form');
+        let message = "";
+        const review = form.review.value;
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const options = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json','Access-Control-Allow-Origin':'*' },
+                body: JSON.stringify({ review })
+            }
+            fetch('localhost:5000/api/analyzer', options).then(response => response.json()).then(({ analysis }) => {
+                console.log(analysis);
+            }).catch((error) => {
+                console.log(error);
+            })
+        })
+
+    </script>
+
+
+
+
+</body>
+
+</html>

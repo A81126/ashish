@@ -1,0 +1,23 @@
+{
+  "name": "sentiment_analyzer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apos-to-lex-form": "^1.0.5",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "natural": "^2.4.4",
+    "nodemon": "^2.0.7",
+    "spelling-corrector": "^3.0.0",
+    "stopword": "^1.0.6"
+  }
+}
