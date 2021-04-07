@@ -1,0 +1,24 @@
+<% if(typeof messages !='undefined'){ %>
+               <% if(messages=="Uploaded Successfully"){%>
+                <div class="alert alert-success" role="alert">
+                <%= messages %>
+              </div>
+              <% }else{%>
+                    <div class="alert alert-danger" role="alert">
+                      <%= messages %>
+                    </div>
+              <% }%>
+                 <% }%>   
+
+
+                 <% if(typeof errors !='undefined'){ %>
+<%
+errors.forEach(function(error){
+     %>
+<div class="alert alert-danger fade show" role="alert">
+  <%=error.msg %>
+</div>
+    
+    <% }); %>
+
+<% }%>

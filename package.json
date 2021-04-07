@@ -12,12 +12,20 @@
   "license": "ISC",
   "dependencies": {
     "apos-to-lex-form": "^1.0.5",
-    "axios": "^0.21.1",
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.11.13",
     "natural": "^2.4.4",
+    "node-fetch": "^2.6.1",
     "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "pino": "^6.11.1",
     "spelling-corrector": "^3.0.0",
     "stopword": "^1.0.6"
   }
